@@ -1,0 +1,35 @@
+{
+  "name": "pfa",
+  "version": "1.0.0",
+  "description": "Crazy-simple Partial Function Application library",
+  "main": "source/index.js",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "mocha": "^3.4.1",
+    "sinon": "^2.2.0"
+  },
+  "scripts": {
+    "test": "npm run test:lint && npm run test:unit",
+    "test:lint": "eslint source/**/*.js test/**/*.spec.js",
+    "test:unit": "mocha -r test/index.js test/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perry-mitchell/pfa.git"
+  },
+  "keywords": [
+    "partial",
+    "application",
+    "curry",
+    "partial",
+    "function",
+    "wrap"
+  ],
+  "author": "Perry Mitchell <perry@perrymitchell.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/perry-mitchell/pfa/issues"
+  },
+  "homepage": "https://github.com/perry-mitchell/pfa#readme"
+}
