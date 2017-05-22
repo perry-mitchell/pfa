@@ -1,7 +1,7 @@
 # pfa
 Crazy-simple Partial Function Application library
 
-[![Build Status](https://travis-ci.org/perry-mitchell/pfa.svg?branch=master)](https://travis-ci.org/perry-mitchell/pfa)
+[![Build Status](https://travis-ci.org/perry-mitchell/pfa.svg?branch=master)](https://travis-ci.org/perry-mitchell/pfa) [![npm version](https://badge.fury.io/js/pfa.svg)](https://www.npmjs.com/package/pfa)
 
 ## About
 Partial function application is way cool! Imagine having a function that you use in multiple places, but its parameters are often repeated due to the configuration not changing. You could wrap the function yourself, or you could use a library like **pfa** to partially apply arguments to the function.
