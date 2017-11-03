@@ -1,4 +1,4 @@
-const { partialApply, _ } = require("../source/index.js");
+const { partialApply, partialApplyRight, _ } = require("../source/index.js");
 
 describe("partialApply", function() {
 
@@ -45,6 +45,24 @@ describe("partialApply", function() {
             expect(fn.calledWithExactly(1, 3, 5)).to.be.true;
         });
 
+    });
+
+});
+
+describe("partialApplyRight", function() {
+
+    it("passes correct parameters", function() {
+        const fn = sinon.spy();
+        const wrapped = partialApplyRight(fn, 1, 2, 3);
+        wrapped("a", "b", "c");
+        expect(fn.callCount).to.equal(1);
+        expect(fn.calledWithExactly("a", "b", "c", 1, 2, 3)).to.be.true;
+    });
+
+    it("throws if placeholders are used", function() {
+        expect(() => {
+            partialApplyRight(() => {}, 1, _, 2);
+        }).to.throw(/placeholders not allowed/);
     });
 
 });
