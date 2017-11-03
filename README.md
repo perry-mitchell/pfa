@@ -30,10 +30,11 @@ const clonedObj = clone(myObj); // equiv: clone(myObj, false, 50);
 ```
 
 ## Usage
-**pfa** exports 2 items:
+**pfa** exports 3 items:
 
  * `partialApply`: The partial application function
  * `_`: Placeholder for unknown arguments
+ * `partialApplyRight`: Partial application to the right side of a function
 
 It also exports the `partialApply` function as the default, so CommonJS and ES6 imports can both be used neatly:
 
@@ -45,6 +46,19 @@ _Or:_
 
 ```javascript
 import partialApply, { _ } from "pfa";
+```
+
+You can also apply to the right-hand side of a function using `partialApplyRight`, like so:
+
+```javascript
+import { partialApplyRight } from "pfa";
+
+function myMethod(target, defaultValue) {
+    // some functionality
+}
+
+const shorthandMethod = partialApplyRight(myMethod, {});
+shorthandMethod({ some: "argument" }); // calls myMethod with 2 arguments
 ```
 
 **pfa** supports NodeJS 6.10 onwards. For browser usage you should transpile to ES5 using something like BabelJS.
