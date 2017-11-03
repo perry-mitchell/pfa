@@ -66,3 +66,15 @@ describe("partialApplyRight", function() {
     });
 
 });
+
+describe("partialApply + partialApplyRight", function() {
+
+    it("passes correct parameters", function() {
+        const fn = sinon.spy();
+        const wrapped = partialApply(partialApplyRight(fn, 1, 2), 7, _, 9);
+        wrapped(8);
+        expect(fn.callCount).to.equal(1);
+        expect(fn.calledWithExactly(7, 8, 9, 1, 2)).to.be.true;
+    });
+
+});
