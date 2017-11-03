@@ -63,6 +63,8 @@ shorthandMethod({ some: "argument" }); // calls myMethod with 2 arguments
 
 **pfa** supports NodeJS 6.10 onwards. For browser usage you should transpile to ES5 using something like BabelJS.
 
+Consult the [API documentation](https://github.com/perry-mitchell/pfa/blob/master/API.md) for more information.
+
 ## Installation
 Simply install as a dependency:
 

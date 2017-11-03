@@ -6,10 +6,12 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.19.0",
+    "jsdoc-to-markdown": "^3.0.0",
     "mocha": "^3.4.1",
     "sinon": "^2.2.0"
   },
   "scripts": {
+    "docs": "jsdoc2md source/**/*.js > API.md",
     "test": "npm run test:lint && npm run test:unit",
     "test:lint": "eslint source/**/*.js test/**/*.spec.js",
     "test:unit": "mocha -r test/index.js test/**/*.spec.js"
