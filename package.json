@@ -3,14 +3,6 @@
   "version": "1.1.0",
   "description": "Crazy-simple Partial Function Application library",
   "main": "source/index.js",
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "eslint": "^3.19.0",
-    "jsdoc-to-markdown": "^3.0.0",
-    "mocha": "^3.4.1",
-    "np": "^2.16.1",
-    "sinon": "^2.2.0"
-  },
   "scripts": {
     "docs": "jsdoc2md source/**/*.js > API.md",
     "pub": "np",
@@ -35,5 +27,13 @@
   "bugs": {
     "url": "https://github.com/perry-mitchell/pfa/issues"
   },
-  "homepage": "https://github.com/perry-mitchell/pfa#readme"
+  "homepage": "https://github.com/perry-mitchell/pfa#readme",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "eslint": "^4.18.1",
+    "jsdoc-to-markdown": "^4.0.1",
+    "mocha": "^5.0.1",
+    "np": "^2.20.1",
+    "sinon": "^4.3.0"
+  }
 }
